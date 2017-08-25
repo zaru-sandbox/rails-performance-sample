@@ -6,12 +6,8 @@
   <p>There is no data.</p>
 <% end %>
 
-<% @articles.map(&:id).each do |id| %>
-  <li><%= id %></li>
-<% end %>
-
-<% Article.all.pluck(:id).each do |id| %>
-  <li><%= id %></li>
+<% @articles.map(&:title).each do |title| %>
+  <li><%= title %></li>
 <% end %>
 
 <table>
