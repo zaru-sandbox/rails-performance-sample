@@ -2,6 +2,14 @@
 
 <h1>Articles</h1>
 
+<% unless @articles.present? %>
+  <p>There is no data.</p>
+<% end %>
+
+<% @articles.map(&:title).each do |title| %>
+  <li><%= title %></li>
+<% end %>
+
 <table>
   <thead>
     <tr>
